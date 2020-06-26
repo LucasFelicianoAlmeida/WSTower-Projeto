@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "3c72d764-2ce9-4feb-ab13-4b71d7c443af",
+		"name": "WsTour-WebAPI",
+		"description": "Essa é uma aplicação solicitada pela FIFA destinada as pessas que desejam estar por dentro dos jogos,seleções,campeonatos ou seja tudo sobre o Mundo do Futebol.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Busca todos os Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Usuarios",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca usuario pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Usuarios/6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastra um novo Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n\r\n        \"nome\": \"Novo \",\r\n        \"email\": \"whatefer\",\r\n        \"apelido\": \"luquinhas\",\r\n        \"foto\": null,\r\n        \"senha\": \"13\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuarios",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginViewModel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"MatadordeBoi@\",\r\n    \"Senha\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuarios/(LoginViewModel",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios",
+								"(LoginViewModel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\":\"Lucas\",\r\n    \"Email\":\"12345\",\r\n    \"Apelido\":\"lusk\",\r\n    \"Senha\":\"12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuarios/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios",
+								"5"
+							],
+							"query": [
+								{
+									"key": "Nome",
+									"value": "Novo Lucas",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Usuarios/12",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuarios",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Selecao",
+			"item": [
+				{
+					"name": "Buscar todas seleções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecoes",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Seleção por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecoes/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecoes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza a Seleção",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\":\"alemanha\",\r\n    \"Uniforme\":\"rosa\",\r\n    \"Bandeira\":\"vermelho\",\r\n    \"Escalacao\":\"1-2-3-1\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Selecoes/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastra Seleção",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Selecoes",
+							"host": [
+								"{{URL}}Selecoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Seleção",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecoes/18",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecoes",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogos",
+			"item": [
+				{
+					"name": "Busca todos os Jogos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/Jogos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogos/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogos/PorData/2012-04-23",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos",
+								"PorData",
+								"2012-04-23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por Estadio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogos/PorEstadio/teste",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos",
+								"PorEstadio",
+								"teste"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por Selação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogos/PorSelecao/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos",
+								"PorSelecao",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastra novos jogos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PlacarCasa\":1,\r\n    \"PlacarVisitante\":1,\r\n    \"PenaltisCasa\":0,\r\n    \"PenaltisVisitante\":7,\r\n    \"Data\":\"2012-04-23\",\r\n    \"Estadio\":\"teste\",\r\n    \"selecaoCasa\": 5,\r\n    \"selecaoVisitante\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Jogos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogador",
+			"item": [
+				{
+					"name": "Busca por Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogador/PorNome/lucas",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogador",
+								"PorNome",
+								"lucas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Jogadores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogador",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastro Jogadores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\": \"Pedor\",\r\n    \"Posicao\": \"atacante\",\r\n    \"QtdeFaltas\": 1,\r\n    \"QtdecartoesAmarelo\": 0,\r\n    \"QtdecartoesVermelho\":0,\r\n    \"Qtgols\":2,\r\n    \"Informacoes\":\"2 metros de altura, bom de bola\",\r\n    \"NumeroCamisa\":4,\r\n    \"Nascimento\":\"2002-02-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Jogador",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogador"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
